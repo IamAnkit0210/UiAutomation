@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke Suite" parallel="tests" thread-count="2">
+    <test name="Test Basics 1">
+        <classes>
+            <class name="org.TestNG.LandingPage">
+                <methods>
+                    <include name="TC01_ValidateLogo"></include>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+    <test name="Test Basics 2">
+        <classes>
+            <class name="org.TestNG.ProfilePageTest">
+                <methods>
+                   <exclude name="TC02_ValidateAddress"></exclude>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
